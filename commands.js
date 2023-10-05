@@ -17,29 +17,28 @@ function createCommandChoices() {
     return commandChoices;
 }
 
-// Simple test command
-const TEST_COMMAND = {
-    name: 'test',
-    description: 'Basic command',
+const enableCommand = {
+    name: 'enable',
+    description: 'Enable the Minecraft server.',
     type: 1,
 };
 
-// Command containing options
-const CHALLENGE_COMMAND = {
-    name: 'challenge',
-    description: 'Challenge to a match of rock paper scissors',
-    options: [
-        {
-            type: 3,
-            name: 'object',
-            description: 'Pick your object',
-            required: true,
-            choices: createCommandChoices(),
-        },
-    ],
+const disableCommand = {
+    name: 'disable',
+    description: 'Disable the Minecraft server.',
     type: 1,
 };
 
-const ALL_COMMANDS = [TEST_COMMAND, CHALLENGE_COMMAND];
+const statusCommand = {
+    name: 'status',
+    description: 'Check the Minecraft server\'s status.',
+    type: 1,
+};
+
+const ALL_COMMANDS = [
+    enableCommand,
+    disableCommand,
+    statusCommand,
+];
 
 InstallGlobalCommands(process.env.APP_ID, ALL_COMMANDS);
