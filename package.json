@@ -1,11 +1,11 @@
 {
-  "name": "getting-started",
+  "name": "mctoggle",
   "version": "1.0.0",
-  "description": "Discord example app",
+  "description": "Used to turn a Minecraft server on and off.",
   "main": "app.js",
   "type": "module",
   "engines": {
-    "node": "16.x"
+    "node": "18.x"
   },
   "scripts": {
     "start": "node app.js",
